@@ -1,0 +1,13 @@
+Question 1:
+No, the program doesn't perform correct computation.For input 10 it prints 15 and for input 10 
+it prints 55. It seems the program added the parent result(function A) but didn't include the 
+child function result (call to funcion B).fork()ing creates an exact copy of the parent process 
+at the time of forking. However, after the fork() is completed, the child has a completely different 
+existence, and will not report back to the parent. The reason function B result was not added to 
+the Total is because the parent's global variables do not alter by changes in the child.
+
+Question 2:
+To fix the issue we can return the result computed by the child process by using exit(result). Then 
+the parent process can use wait(&status) and then get the result from WEXITSTATUS(status).
+
+

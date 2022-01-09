@@ -1,0 +1,18 @@
+Question 1:
+After running 6 times the outputs are: 93,111,95,88,161,82
+It doesn't show 15000 .One reason is because there are a lot of cases when 2 or 3 of the processes read the same value
+then update with plus one.So it doesn't get incremented 3 times.Also sometimes the value gets decreased.
+For example  process_1 may read the value 15.Then other processes increments this value 5 times to 
+make it 20. But now process_1 will update it with value 16 resulting in decrease.
+
+Question 2:
+In the best possible case the range will be between (1-15000)
+
+Question 3:
+The code for this task is  written in modified_task2.c . I have also written the count.c that is required for
+this task.
+Instead of parallelly running the processes I have modified it to run in sequential manner. This way
+each process runs without affecting other and we get 15000 in the end.
+
+
+
