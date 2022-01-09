@@ -31,7 +31,9 @@ int main ()
 		//Process executes another program (Make sure to indicate the complete path of your program count.c in the "X"-field 
 		//and the name of the executable file in the "Y"-field e.g., replace "X" with "/home/xyz/Desktop/Lab1/count.out" and "Y" with "./count.out" 
 		//E.g., in my case it is: execl("/home/karim/Desktop/CISC324/Labs/L1/count.out","./count.out", NULL);
-		execl("/media/zakir/study/linux/versity/OS/exercise_2/count.out","./count.out", NULL);
+		//execl("/media/zakir/study/linux/versity/OS/2017331068_exercise_2/count.out","./count.out", NULL);
+		execl("./count.out","./count.out", NULL);
+		
 		//prints to user that execl failed
 		printf("Process[%d]: Failed to execute execl()\n",getpid());
 	}

@@ -6,7 +6,7 @@
 ///This function executes the count.c file which modifies the value of num.txt
 void modify(int pid)
 {
-        execl("/media/zakir/study/linux/versity/OS/exercise_2/count.out","./count.out", NULL);    
+        execl("./count.out","./count.out", NULL);    
         //prints to user that execl failed
         printf("Process[%d]: Failed to execute execl()\n",pid);
 }
